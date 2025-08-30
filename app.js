@@ -1,31 +1,34 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
+
 let amigosAgregados = [];
 
 function agregarAmigo() {
-    document.getElementById("amigo");
-    if(document.getElementById("amigo").value ==""){
-        alert("Por favor ingrese un nombre");
+    //Selecciona el caMpo y lo guarda en un variable
+    let inputAmigo = document.getElementById("amigo");
+    if(inputAmigo.value === ""){
+        alert("¡¡Por favor ingrese un nombre!!");
     } else {
-        amigosAgregados.push(document.getElementById("amigo").value);
+        //Agrega el valor del campo al array
+        amigosAgregados.push(inputAmigo.value);
+        //Limpia el campo de textro para el siguiente nombre a ingresar
+        inputAmigo.value = "";
+        //Activa la función que actualiza la lista de amigos
+        actualizarLista();
     }
-     document.getElementById("amigo").value = "";
 }
 
-function lista(){
-    //seleccionar elmento <ul>
-    const amigos = document.querySelector("listaAmigos");
-    
-    //recorrer el arreglo usando "for"
-        amigosAgregados.forEach (nombreAmigo => {
-       //Crear un nuevo elemento <li>
-            const itemLista = document.createElement("li");
-        //asignar el texto de la array a la lista 
-            itemLista.textContent = amigos;
-        //agregar el nuevo <li> a la <ul>
-            amigos.appendChild(itemLista);
-        //
-        });
-        lista()
-   }
-
-  
+function actualizarLista(){
+    //selecciona la lista que queremos intervenir del DOM y se guarda en una variable
+    const listaDeAmigos = document.getElementById("listaAmigos")
+    //Limpia la lista antes de crear un nuevo elemento
+    listaDeAmigos.innerHTML = "";
+    //Recorreo el array para inlgresar un <li> a cada elemento
+    for (let i = 0; i < amigosAgregados.length; i++) {
+        //Crea el elemento <li> en el <Ul>
+        const nuevoAmigo = document.createElement ("li");
+        //Asigna el nombre del array al elemento <li>
+        nuevoAmigo.textContent = amigosAgregados[i];
+        //Agrega el nuevo <li> a la lista <ul>
+        listaDeAmigos.appendChild(nuevoAmigo)
+    } 
+}
