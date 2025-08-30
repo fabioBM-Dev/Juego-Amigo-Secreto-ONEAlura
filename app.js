@@ -32,3 +32,15 @@ function actualizarLista(){
         listaDeAmigos.appendChild(nuevoAmigo)
     } 
 }
+
+//Genera el numero aleatorio basado el lenght del array
+function sorteo(){
+    if (amigosAgregados.length == 2){
+        alert("debes ingresar minimo 2 amigos");
+    }else {
+        let numeroGenerado = Math.floor(Math.random()*amigosAgregados.length+1);
+        return
+        console.log(numeroGenerado)
+    }
+
+}
