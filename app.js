@@ -1,6 +1,6 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-let amigosAgregados = [];
+let amigosAgregados = ["FABIO","NELSON", "ALEX", "GLORIA", "MARIA" ];
 
 function agregarAmigo() {
     //Selecciona el caMpo y lo guarda en un variable
@@ -34,13 +34,23 @@ function actualizarLista(){
 }
 
 //Genera el numero aleatorio basado el lenght del array
-function sorteo(){
-    if (amigosAgregados.length == 2){
-        alert("debes ingresar minimo 2 amigos");
-    }else {
-        let numeroGenerado = Math.floor(Math.random()*amigosAgregados.length+1);
-        return
-        console.log(numeroGenerado)
+function sortearAmigo(){
+    if (amigosAgregados.length < 2){
+        alert("!!Debes ingresar por lo menos 2 nombres de amigos¡¡");
+    } else {
+        let nombresSorteados = [];
+        var indiceAleatorio = Math.floor(Math.random()*amigosAgregados.length);
+        if (nombresSorteados.includes(indiceAleatorio)) {
+            indiceAleatorio
+        } else {
+            nombresSorteados.push(indiceAleatorio)
+        }
+        //muestra el resultado del amigo elegido aleatoriamente en el DOM
+        const resultado = document.getElementById("resultado")
+            //ingresa el nombre de la lista 
+        resultado.innerHTML = `FELICIDADES, TU AMIGO SECRETO ES ${amigosAgregados[indiceAleatorio]}`;
+        console.log(`Tu amigo secreto es: ${amigosAgregados[indiceAleatorio]}`);
+        
     }
 
 }
