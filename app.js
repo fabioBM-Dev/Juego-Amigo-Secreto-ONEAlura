@@ -48,7 +48,7 @@ function sortearAmigo(){
         //muestra el resultado del amigo elegido aleatoriamente en el DOM
         const resultado = document.getElementById("resultado")
             //ingresa el nombre de la lista 
-        resultado.innerHTML = `FELICIDADES, TU AMIGO SECRETO ES ${amigosAgregados[indiceAleatorio]}`;
+        resultado.innerHTML = `FELICIDADES, TU AMIGO SECRETO ES "${amigosAgregados[indiceAleatorio]}"`;
         console.log(`Tu amigo secreto es: ${amigosAgregados[indiceAleatorio]}`);
         
     }
