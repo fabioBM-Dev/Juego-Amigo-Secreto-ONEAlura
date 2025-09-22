@@ -1,6 +1,6 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-let amigosAgregados = ["FABIO","NELSON", "ALEX", "GLORIA", "MARIA" ];
+let amigosAgregados = [];
 
 function agregarAmigo() {
     //Selecciona el caMpo y lo guarda en un variable
@@ -26,6 +26,7 @@ function actualizarLista(){
     for (let i = 0; i < amigosAgregados.length; i++) {
         //Crea el elemento <li> en el <Ul>
         const nuevoAmigo = document.createElement ("li");
+        nuevoAmigo.className = "estilo_li";
         //Asigna el nombre del array al elemento <li>
         nuevoAmigo.textContent = amigosAgregados[i];
         //Agrega el nuevo <li> a la lista <ul>

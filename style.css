@@ -134,6 +134,12 @@ ul {
     margin: 20px 0;
 }
 
+.estilo_li {
+    color: #4B69FD;
+    border: 2px solid #4B69FD ;
+    border-radius: 5px;
+}
+
 .result-list {
     margin-top: 15px;
     color: #05DF05;
@@ -159,4 +165,9 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.footer {
+    text-align: center;
+    color: whitesmoke;
 }
